@@ -28,6 +28,10 @@ public class EmailController {
 
     @PostMapping
     public boolean addEmails(@RequestBody List<EmailDto> emailList){
-        return emailThreadService.addEmails(emailList);
+        boolean emailsAdded = emailThreadService.addEmails(emailList);
+        if (emailsAdded) {
+            emailThreadService.createThreads();
+        }
+        return emailsAdded;
     }
 }

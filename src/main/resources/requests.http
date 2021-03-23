@@ -1,0 +1,96 @@
+POST http://localhost:8080/emails
+Content-Type: application/json
+
+[{
+  "uuid": "715211ce-b8c2-429c-ba5c-57cadcb298c3",
+  "recipient": "Brazil",
+  "content": "Lamprotornis nitens",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "259d2e71-00ed-4c3b-a80a-559f53cf7d64",
+  "recipient": "Indonesia",
+  "content": "Meleagris gallopavo",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "da52805e-df01-47e0-9f67-e6f4dca66b3f",
+  "recipient": "Brazil",
+  "content": "Notechis semmiannulatus",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "a1c1111b-cb1c-49e6-b8f4-b34e32729f9d",
+  "recipient": "Ivory Coast",
+  "content": "Macropus agilis",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "7090cdf0-f7b5-4707-a08d-4c05f5811344",
+  "recipient": "Poland",
+  "content": "Corvus albicollis",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "f8a0d122-afed-4617-ab44-368f0a4f7388",
+  "recipient": "United States",
+  "content": "Buteo galapagoensis",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "1f686112-3529-4038-8937-3b070d15843e",
+  "recipient": "Serbia",
+  "content": "Lemur fulvus",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "6edeae37-6f92-4dec-877e-f4d17cc9ed4f",
+  "recipient": "Albania",
+  "content": "Eudyptula minor",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "6962bf29-bc36-4f9f-ad78-aa493d63a166",
+  "recipient": "China",
+  "content": "Hymenolaimus malacorhynchus",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "e626f868-2759-467e-bcd6-ce34eb624261",
+  "recipient": "Portugal",
+  "content": "Gyps bengalensis",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "d46ed8e6-7220-4a35-8a12-4e52f41e05ad",
+  "recipient": "Russia",
+  "content": "Eudyptula minor",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "be179e57-74d3-4ab2-a723-4df743a3bcb2",
+  "recipient": "Ukraine",
+  "content": "Mungos mungo",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "e647c93c-1297-40e2-bc19-a1d01300c28d",
+  "recipient": "Brazil",
+  "content": "Laniaurius atrococcineus",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "6d5a622f-fec9-4563-8338-b5afc96503ac",
+  "recipient": "Thailand",
+  "content": "Meles meles",
+  "signature": "",
+  "status": false
+}, {
+  "uuid": "def0dc3e-5e19-4017-b660-61f4109dc2a8",
+  "recipient": "Russia",
+  "content": "Felis wiedi or Leopardus weidi",
+  "signature": "",
+  "status": false
+}]
+
+###

@@ -2,16 +2,26 @@ package com.jaworskimateuszm.firstproject.dto;
 
 public class EmailDto {
 
+    private String uuid;
     private String recipient;
     private String content;
     private String signature;
     private Boolean status;
 
-    public EmailDto(String recipient, String content, String signature, Boolean status) {
+    public EmailDto(String uuid, String recipient, String content, String signature, Boolean status) {
+        this.uuid = uuid;
         this.recipient = recipient;
         this.content = content;
         this.signature = signature;
         this.status = status;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getRecipient() {
@@ -49,7 +59,8 @@ public class EmailDto {
     @Override
     public String toString() {
         return "EmailDto{" +
-                "recipient='" + recipient + '\'' +
+                "uuid='" + uuid + '\'' +
+                ", recipient='" + recipient + '\'' +
                 ", content='" + content + '\'' +
                 ", signature='" + signature + '\'' +
                 ", status=" + status +

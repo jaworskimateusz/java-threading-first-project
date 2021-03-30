@@ -2,8 +2,8 @@ package com.jaworskimateuszm.firstproject.controller;
 
 import com.jaworskimateuszm.firstproject.dto.EmailDto;
 import com.jaworskimateuszm.firstproject.service.EmailExecutorService;
+import com.jaworskimateuszm.firstproject.service.EmailService;
 import com.jaworskimateuszm.firstproject.service.EmailThreadService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,10 +15,12 @@ public class EmailController {
     // We will be testing services separately, so inheritance is ok.
     private EmailThreadService emailThreadService;
     private EmailExecutorService emailExecutorService;
+    private EmailService emailService;
 
-    public EmailController(EmailThreadService emailThreadService, EmailExecutorService emailExecutorService) {
+    public EmailController(EmailThreadService emailThreadService, EmailExecutorService emailExecutorService, EmailService emailService) {
         this.emailThreadService = emailThreadService;
         this.emailExecutorService = emailExecutorService;
+        this.emailService = emailService;
     }
 
     @GetMapping
@@ -28,9 +30,10 @@ public class EmailController {
 
     @PostMapping
     public boolean addEmails(@RequestBody List<EmailDto> emailList){
-        boolean emailsAdded = emailThreadService.addEmails(emailList);
+        boolean emailsAdded = emailExecutorService.addEmails(emailList);
         if (emailsAdded) {
-            emailThreadService.createThreads();
+//            emailThreadService.createThreads();
+            emailExecutorService.createExecutors();
         }
         return emailsAdded;
     }

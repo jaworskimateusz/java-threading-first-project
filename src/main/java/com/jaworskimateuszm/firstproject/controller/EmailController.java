@@ -15,12 +15,10 @@ public class EmailController {
     // We will be testing services separately, so inheritance is ok.
     private EmailThreadService emailThreadService;
     private EmailExecutorService emailExecutorService;
-    private EmailService emailService;
 
-    public EmailController(EmailThreadService emailThreadService, EmailExecutorService emailExecutorService, EmailService emailService) {
+    public EmailController(EmailThreadService emailThreadService, EmailExecutorService emailExecutorService) {
         this.emailThreadService = emailThreadService;
         this.emailExecutorService = emailExecutorService;
-        this.emailService = emailService;
     }
 
     @GetMapping
@@ -30,10 +28,11 @@ public class EmailController {
 
     @PostMapping
     public boolean addEmails(@RequestBody List<EmailDto> emailList){
-        boolean emailsAdded = emailExecutorService.addEmails(emailList);
+        boolean emailsAdded = emailThreadService.addEmails(emailList);
+//        boolean emailsAdded = emailExecutorService.addEmails(emailList);
         if (emailsAdded) {
-//            emailThreadService.createThreads();
-            emailExecutorService.createExecutors();
+            emailThreadService.createThreads();
+//            emailExecutorService.createExecutors();
         }
         return emailsAdded;
     }

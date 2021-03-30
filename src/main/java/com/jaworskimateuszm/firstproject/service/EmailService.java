@@ -32,7 +32,7 @@ public class EmailService {
 
     protected void sendEmail(List<EmailDto> emailList, String threadName) {
         emailList.forEach(this::send);
-        System.out.println(threadName + " send " + emailList.size());
+        System.out.println(threadName + " sent " + emailList.size());
     }
 
     protected void send(EmailDto email) {

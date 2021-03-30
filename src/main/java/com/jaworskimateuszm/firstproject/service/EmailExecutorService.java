@@ -11,7 +11,7 @@ public class EmailExecutorService extends EmailService {
     public void createExecutors() {
         int executorsNumber = emails.size() / N + 1;
         ExecutorService executorService = Executors.newFixedThreadPool(executorsNumber);
-        executorService.execute(() -> sendEmail(getFirstNMails(), "EXEC"));
+        executorService.execute(() -> sendEmail(getFirstNMails(), "Executor"));
         executorService.shutdown();
     }
 

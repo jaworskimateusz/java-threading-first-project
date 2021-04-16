@@ -2,7 +2,6 @@ package com.jaworskimateuszm.firstproject.controller;
 
 import com.jaworskimateuszm.firstproject.dto.EmailDto;
 import com.jaworskimateuszm.firstproject.service.EmailExecutorService;
-import com.jaworskimateuszm.firstproject.service.EmailService;
 import com.jaworskimateuszm.firstproject.service.EmailThreadService;
 import org.springframework.web.bind.annotation.*;
 
